@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import OnBoardingScreen from "./scr/screens/OnBoardingScreen";
+import FlexboxScreen from "./scr/screens/FlexboxScreen";
+import WhosUsScreen from "./scr/screens/WhosUsScreen";
+import { useFonts } from "expo-font";
+import ContactUs from "./scr/screens/ContactUs";
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const [fontsLoaded] = useFonts({
+    Cairo: require("./assets/fonts/static/Cairo-SemiBold.ttf"),
+  });
+  const [fontsLoaded2] = useFonts({
+    CairoBold: require("./assets/fonts/static/Cairo-Bold.ttf"),
+  });
+  const [fontsLoaded3] = useFonts({
+    CairoRegular: require("./assets/fonts/static/Cairo-Regular.ttf"),
+  });
+  if (!fontsLoaded) {
+    return null;
+  }
+  if (!fontsLoaded2) {
+    return null;
+  }
+  if (!fontsLoaded3) {
+    return null;
+  }
+  // return <OnBoardingScreen />;
+  // return <FlexboxScreen />;
+  return <WhosUsScreen />;
+  // return <ContactUs />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
