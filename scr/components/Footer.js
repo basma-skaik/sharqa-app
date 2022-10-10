@@ -1,21 +1,40 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+  useWindowDimensions,
+} from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const Footer = () => {
+  const navigation = useNavigation();
+  const { width } = useWindowDimensions();
   return (
-    <View style={styles.footerContanier}>
-      <View style={styles.footerItems}>
+    <View style={[styles.footerContanier, { width }]}>
+      <TouchableWithoutFeedback
+        style={styles.footerItems}
+        onPress={() => navigation.navigate("ContactUs")}
+      >
         <Image source={require("../../assets/footerImages/phone-call.png")} />
         <Text style={styles.text}>اتصل بنا</Text>
-      </View>
-      <View style={styles.footerItems}>
+      </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback
+        style={styles.footerItems}
+        onPress={() => navigation.navigate("WhosUsScreen")}
+      >
         <Image source={require("../../assets/footerImages/.png")} />
         <Text style={styles.text}>من نحن</Text>
-      </View>
-      <View style={styles.footerItems}>
+      </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback
+        style={styles.footerItems}
+        onPress={() => navigation.navigate("FlexboxScreen")}
+      >
         <Image source={require("../../assets/footerImages/house.png")} />
         <Text style={styles.text}>الرئيسية</Text>
-      </View>
+      </TouchableWithoutFeedback>
     </View>
   );
 };

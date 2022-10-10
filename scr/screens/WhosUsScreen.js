@@ -1,38 +1,33 @@
 import {
   StyleSheet,
   Text,
-  View,
   Image,
-  StatusBar,
+  SafeAreaView,
   useWindowDimensions,
 } from "react-native";
 import React from "react";
-
 export default function WhosUsScreen() {
   const { width } = useWindowDimensions();
   return (
-    <>
-      <StatusBar style="dark" />
-      <View style={[styles.container, { width }]}>
-        <Image
-          style={styles.imgStyle}
-          source={require("../../assets/images/group.png")}
-        />
-        <Text style={styles.title}>من نحن</Text>
-        <Text style={styles.content}>
-          نقوم بتنفيذ جميع مقاولات واعمال البناء بجميع المراحل بداية من اعمال
-          الحفر للأساسات مرورا بجميع المراحل وحتى اعمال تركيب الكهرباء والسباكة
-          والنجارة واعمال السيراميك والرخام والواجهات والدهانات.
-          {"\n"}
-          {"\n"}نقدم مجموعة كبيرة ومتميزة من الافكار والتصميمات لتشطيب العقارات
-          والوحدات السكنية والشركات والهيئات والمؤسسات الحكومية وغيرها من
-          الوحدات وتركيب كافة الخدمات واعمال التشطيبات الكاملة.
-          {"\n"}
-          {"\n"}نقدم كافة الخدمات الخاصة بتصميم الديكورات وفق احدث الاساليب
-          المتطورة والاشكال العصرية
-        </Text>
-      </View>
-    </>
+    <SafeAreaView style={[styles.container, { width }]}>
+      <Image
+        style={styles.imgStyle}
+        source={require("../../assets/images/group.png")}
+      />
+      <Text style={styles.title}>من نحن</Text>
+      <Text style={styles.content}>
+        نقوم بتنفيذ جميع مقاولات واعمال البناء بجميع المراحل بداية من اعمال
+        الحفر للأساسات مرورا بجميع المراحل وحتى اعمال تركيب الكهرباء والسباكة
+        والنجارة واعمال السيراميك والرخام والواجهات والدهانات.
+        {"\n"}
+        {"\n"}نقدم مجموعة كبيرة ومتميزة من الافكار والتصميمات لتشطيب العقارات
+        والوحدات السكنية والشركات والهيئات والمؤسسات الحكومية وغيرها من الوحدات
+        وتركيب كافة الخدمات واعمال التشطيبات الكاملة.
+        {"\n"}
+        {"\n"}نقدم كافة الخدمات الخاصة بتصميم الديكورات وفق احدث الاساليب
+        المتطورة والاشكال العصرية
+      </Text>
+    </SafeAreaView>
   );
 }
 

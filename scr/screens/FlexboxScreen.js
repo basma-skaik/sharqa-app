@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, FlatList } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import React from "react";
 import Header from "../components/Header";
 import OnFlexBoxItem from "../screens/OnFlexBoxItem";
@@ -71,9 +71,7 @@ const onFlexboxList = [
 const FlexboxScreen = () => {
   const { width } = useWindowDimensions();
   return (
-    // <>
-    //   <StatusBar backgroundColor={"#7380A1"} />
-    <View style={[styles.contanier1, { width }]}>
+    <SafeAreaView style={[styles.contanier1, { width }]}>
       <View>
         <Header title="المقاولات" />
       </View>
@@ -93,8 +91,7 @@ const FlexboxScreen = () => {
         )}
       />
       <Footer />
-    </View>
-    // </>
+    </SafeAreaView>
   );
 };
 

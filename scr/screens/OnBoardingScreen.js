@@ -1,4 +1,9 @@
-import { View, StyleSheet, useWindowDimensions, FlatList } from "react-native";
+import {
+  StyleSheet,
+  useWindowDimensions,
+  FlatList,
+  SafeAreaView,
+} from "react-native";
 import React from "react";
 import OnBoardingItem from "./OnBoardingItem";
 import Dots from "../components/Dots";
@@ -25,7 +30,7 @@ const OnBoardingScreen = () => {
     setActiveIndex(currentIndex);
   };
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={onBoardingList}
         keyExtractor={(item) => item.id}
@@ -47,7 +52,7 @@ const OnBoardingScreen = () => {
           <Dots index={index} activeIndex={activeIndex} />
         )}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

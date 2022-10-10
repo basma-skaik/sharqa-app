@@ -1,8 +1,8 @@
-import OnBoardingScreen from "./scr/screens/OnBoardingScreen";
-import FlexboxScreen from "./scr/screens/FlexboxScreen";
-import WhosUsScreen from "./scr/screens/WhosUsScreen";
 import { useFonts } from "expo-font";
-import ContactUs from "./scr/screens/ContactUs";
+import { NavigationContainer } from "@react-navigation/native";
+import StackNavigator from "./StackNavigator";
+import { StatusBar } from "react-native";
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     Cairo: require("./assets/fonts/static/Cairo-SemiBold.ttf"),
@@ -22,8 +22,10 @@ export default function App() {
   if (!fontsLoaded3) {
     return null;
   }
-  // return <OnBoardingScreen />;
-  // return <FlexboxScreen />;
-  return <WhosUsScreen />;
-  // return <ContactUs />;
+  return (
+    <NavigationContainer>
+      <StackNavigator />
+      <StatusBar style="dark" />
+    </NavigationContainer>
+  );
 }

@@ -1,9 +1,17 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  useWindowDimensions,
+} from "react-native";
 import React from "react";
 import Header from "../components/Header";
 const ContactUs = () => {
+  const { width } = useWindowDimensions();
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={[styles.container, { width }]}>
       <Header title="تواصل معنا" />
       <View style={styles.imgContainer}>
         <Image
@@ -26,7 +34,7 @@ const ContactUs = () => {
         العنوان : المملكة العربية{"\n"}
         السعودية
       </Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
