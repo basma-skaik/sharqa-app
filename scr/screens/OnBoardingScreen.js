@@ -8,6 +8,7 @@ import React from "react";
 import OnBoardingItem from "./OnBoardingItem";
 import Dots from "../components/Dots";
 import { useState } from "react";
+import Touchable from "../components/Touchable";
 
 const onBoardingList = [
   {
@@ -52,6 +53,7 @@ const OnBoardingScreen = () => {
           <Dots index={index} activeIndex={activeIndex} />
         )}
       />
+      <Touchable title="تخطي" screen="ButtomTab" />
     </SafeAreaView>
   );
 };

@@ -1,8 +1,7 @@
 import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import React from "react";
 import Header from "../components/Header";
-import OnFlexBoxItem from "../screens/OnFlexBoxItem";
-import Footer from "../components/Footer";
+import HomeItem from "./HomeItem";
 import { useWindowDimensions } from "react-native";
 
 const onFlexboxList = [
@@ -68,34 +67,35 @@ const onFlexboxList = [
   },
 ];
 
-const FlexboxScreen = () => {
+const HomeScreen = () => {
   const { width } = useWindowDimensions();
   return (
     <SafeAreaView style={[styles.contanier1, { width }]}>
-      <View>
-        <Header title="المقاولات" />
-      </View>
-      <Text style={styles.index}>الفهرس</Text>
-      <FlatList
-        style={{ marginBottom: 60 }}
-        data={onFlexboxList}
-        keyExtractor={(item) => item.id}
-        numColumns={2}
-        showsVerticalScrollIndicator={false}
-        renderItem={({ item }) => (
-          <OnFlexBoxItem
-            key={item.id}
-            title={item.title}
-            imageUrl={item.imageUrl}
-          />
-        )}
-      />
-      <Footer />
+      <>
+        <View>
+          <Header title="المقاولات" />
+        </View>
+        <Text style={styles.index}>الفهرس</Text>
+        <FlatList
+          style={{ marginBottom: 110 }}
+          data={onFlexboxList}
+          keyExtractor={(item) => item.id}
+          numColumns={2}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <HomeItem
+              key={item.id}
+              title={item.title}
+              imageUrl={item.imageUrl}
+            />
+          )}
+        />
+      </>
     </SafeAreaView>
   );
 };
 
-export default FlexboxScreen;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   contanier1: {

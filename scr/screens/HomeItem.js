@@ -5,23 +5,29 @@ import {
   View,
   Image,
   useWindowDimensions,
+  Pressable,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-const OnFlexBoxItem = ({ title, imageUrl }) => {
+const HomeItem = ({ title, imageUrl }) => {
   const { width } = useWindowDimensions();
+  const { navigate } = useNavigation();
   return (
-    <View style={[styles.flexContanier, { width }]}>
+    <Pressable
+      style={[styles.flexContanier, { width }]}
+      onPress={() => navigate("ItemDetails", { title, imageUrl })}
+    >
       <View style={styles.contentContainer}>
         <View style={styles.imageContainer}>
           <Image source={imageUrl} resizeMode="contain" />
         </View>
         <Text style={styles.textStyle}>{title}</Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
-export default OnFlexBoxItem;
+export default HomeItem;
 
 const styles = StyleSheet.create({
   flexContanier: {
