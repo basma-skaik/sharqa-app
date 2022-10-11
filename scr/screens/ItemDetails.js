@@ -1,14 +1,14 @@
 import { Image, SafeAreaView, StyleSheet, Text } from "react-native";
 import React from "react";
 import { useRoute } from "@react-navigation/native";
-import Touchable from "../components/Touchable";
+import TouchableBack from "../components/TouchableBack";
 
 const ItemDetails = () => {
   const { params } = useRoute();
   const { title, imageUrl } = params;
   return (
     <SafeAreaView style={styles.container}>
-      <Touchable title="رجوع" screen="ButtomTab" />
+      <TouchableBack title="رجوع" />
       <Image resizeMode="contain" style={styles.img} source={imageUrl} />
       <Text style={styles.title}>{title}</Text>
     </SafeAreaView>
