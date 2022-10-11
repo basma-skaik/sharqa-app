@@ -1,7 +1,7 @@
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useNavigation } from "@react-navigation/native";
+// import { useNavigation } from "@react-navigation/native";
 import OnBoardingScreen from "../screens/OnBoardingScreen";
 // import { Pressable } from "react-native";
 import ButtomTab from "../navigation/ButtomTab";
@@ -10,7 +10,7 @@ import ButtomTab from "../navigation/ButtomTab";
 const Stack = createNativeStackNavigator();
 
 const AppIndex = () => {
-  const { goBack, canGoBack } = useNavigation();
+  // const { goBack, canGoBack } = useNavigation();
 
   const [fontsLoaded] = useFonts({
     Cairo: require("../../assets/fonts/static/Cairo-SemiBold.ttf"),
