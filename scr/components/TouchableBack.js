@@ -16,7 +16,7 @@ const TouchableBack = (props) => {
           marginRight: -280,
           width: 100,
         }}
-        onPress={() => goBack}
+        onPress={() => goBack()}
       >
         <Text style={{ fontFamily: "CairoBold", textAlign: "center" }}>
           {props.title}
