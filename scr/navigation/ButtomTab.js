@@ -1,8 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeStack from "./HomeStack";
-import ContactUs from "../screens/ContactUs";
-import WhosUsScreen from "../screens/WhosUsScreen";
+import { ContactUs, AboutUsScreen } from "../screens";
 import { Entypo } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -38,8 +37,8 @@ const ButtomTab = () => {
           ),
           tabBarLabel: "من نحن",
         }}
-        name="WhosUsScreen"
-        component={WhosUsScreen}
+        name="AboutUsScreen"
+        component={AboutUsScreen}
       />
       <Tab.Screen
         options={{

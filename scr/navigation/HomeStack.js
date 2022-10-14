@@ -1,8 +1,7 @@
 import { StyleSheet } from "react-native";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/HomeScreen";
-import ItemDetails from "../screens/ItemDetails";
+import { HomeScreen, ItemDetails } from "../screens";
 
 const HomeStack = () => {
   const Stack = createNativeStackNavigator();
@@ -12,7 +11,11 @@ const HomeStack = () => {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="ItemDetails" component={ItemDetails} />
+      <Stack.Screen
+        name="ItemDetails"
+        // options={{ headerShown: true }}
+        component={ItemDetails}
+      />
     </Stack.Navigator>
   );
 };

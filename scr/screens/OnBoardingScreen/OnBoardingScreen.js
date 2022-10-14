@@ -5,19 +5,19 @@ import {
   SafeAreaView,
 } from "react-native";
 import React from "react";
-import OnBoardingItem from "./OnBoardingItem";
-import Dots from "../components/Dots";
+import OnBoardingItem from "./components/OnBoardingItem";
+import Dots from "../../components/Dots";
 import { useState } from "react";
-import TouchableNext from "../components/TouchableNext";
+import TouchableNext from "../../components/TouchableNext";
 
 const onBoardingList = [
   {
     id: 1,
-    imageUrl: require("../../assets/images/group.png"),
+    imageUrl: require("../../../assets/images/group.png"),
   },
   {
     id: 2,
-    imageUrl: require("../../assets/images/card1.png"),
+    imageUrl: require("../../../assets/images/card1.png"),
   },
 ];
 
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    // marginHorizontal: 65,
   },
   dotsContentContainerStyle: {
     justifyContent: "center",

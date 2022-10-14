@@ -1,69 +1,69 @@
 import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import React from "react";
-import Header from "../components/Header";
-import HomeItem from "./HomeItem";
+import Header from "../../components/Header";
+import HomeItem from "../HomeScreen/components/HomeItem";
 import { useWindowDimensions } from "react-native";
 
 const onFlexboxList = [
   {
     id: 1,
     title: "متطلبات تأسيس منشاة مقاولات",
-    imageUrl: require("../../assets/flexBoxImages/group12.png"),
+    imageUrl: require("../../../assets/flexBoxImages/group12.png"),
   },
   {
     id: 2,
     title: "التعريف بقطاع المقاولات ",
-    imageUrl: require("../../assets/flexBoxImages/construction_project_plan_building_architect_design_develop-61_icon-icons.com_60253.png"),
+    imageUrl: require("../../../assets/flexBoxImages/construction_project_plan_building_architect_design_develop-61_icon-icons.com_60253.png"),
   },
   {
     id: 3,
     title: " قواعد وإجراءات أساسية بشأن التعاقد ",
-    imageUrl: require("../../assets/flexBoxImages/business.png"),
+    imageUrl: require("../../../assets/flexBoxImages/business.png"),
   },
   {
     id: 4,
     title: "تراخيص مزاولة نشاط المقاولات",
-    imageUrl: require("../../assets/flexBoxImages/file.png"),
+    imageUrl: require("../../../assets/flexBoxImages/file.png"),
   },
   {
     id: 5,
     title: "منصات الكترونية في خدمة المقاول",
-    imageUrl: require("../../assets/flexBoxImages/group53.png"),
+    imageUrl: require("../../../assets/flexBoxImages/group53.png"),
   },
   {
     id: 6,
     title: "الجهات ذات العلاقة",
-    imageUrl: require("../../assets/flexBoxImages/develop.png"),
+    imageUrl: require("../../../assets/flexBoxImages/develop.png"),
   },
   {
     id: 7,
     title: "آليات تسليم مشاريع المقاولات",
-    imageUrl: require("../../assets/flexBoxImages/construction_project_plan_building_architect_design_develop-95_icon-icons.com_60215.png"),
+    imageUrl: require("../../../assets/flexBoxImages/construction_project_plan_building_architect_design_develop-95_icon-icons.com_60215.png"),
   },
   {
     id: 8,
     title: "خطة عمل المشروعات وتدفقاتها المالية",
-    imageUrl: require("../../assets/flexBoxImages/money.png"),
+    imageUrl: require("../../../assets/flexBoxImages/money.png"),
   },
   {
     id: 9,
     title: "علاقة  المقاول مع مكاتب وإجراءات السلامة",
-    imageUrl: require("../../assets/flexBoxImages/bank.png"),
+    imageUrl: require("../../../assets/flexBoxImages/bank.png"),
   },
   {
     id: 10,
     title: "أنظمة عقود المقاولات ",
-    imageUrl: require("../../assets/flexBoxImages/contract.png"),
+    imageUrl: require("../../../assets/flexBoxImages/contract.png"),
   },
   {
     id: 11,
     title: ":لجنة المقاولات",
-    imageUrl: require("../../assets/flexBoxImages/group40.png"),
+    imageUrl: require("../../../assets/flexBoxImages/group40.png"),
   },
   {
     id: 12,
     title: "الجانب الاجتماعي والوطني ",
-    imageUrl: require("../../assets/flexBoxImages/social-care.png"),
+    imageUrl: require("../../../assets/flexBoxImages/social-care.png"),
   },
 ];
 

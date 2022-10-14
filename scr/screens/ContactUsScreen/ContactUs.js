@@ -7,7 +7,7 @@ import {
   useWindowDimensions,
 } from "react-native";
 import React from "react";
-import Header from "../components/Header";
+import Header from "../../components/Header";
 const ContactUs = () => {
   const { width } = useWindowDimensions();
   return (
@@ -16,15 +16,15 @@ const ContactUs = () => {
       <View style={styles.imgContainer}>
         <Image
           style={styles.qrBorder}
-          source={require("../../assets/images/qrborder.png")}
+          source={require("../../../assets/images/qrborder.png")}
         />
         <Image
           style={styles.qrCode}
-          source={require("../../assets/images/qrcode.png")}
+          source={require("../../../assets/images/qrcode.png")}
         />
         <Image
           style={styles.qrScan}
-          source={require("../../assets/images/Scaning.png")}
+          source={require("../../../assets/images/Scaning.png")}
         />
       </View>
       <Text style={styles.contactText}>تواصل معنا على:</Text>

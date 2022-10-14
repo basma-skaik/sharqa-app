@@ -6,13 +6,13 @@ import {
   useWindowDimensions,
 } from "react-native";
 import React from "react";
-export default function WhosUsScreen() {
+export default function AboutUsScreen() {
   const { width } = useWindowDimensions();
   return (
     <SafeAreaView style={[styles.container, { width }]}>
       <Image
         style={styles.imgStyle}
-        source={require("../../assets/images/group.png")}
+        source={require("../../../assets/images/group.png")}
       />
       <Text style={styles.title}>من نحن</Text>
       <Text style={styles.content}>

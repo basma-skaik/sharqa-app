@@ -1,7 +1,7 @@
 import { Image, SafeAreaView, StyleSheet, Text } from "react-native";
 import React from "react";
 import { useRoute } from "@react-navigation/native";
-import TouchableBack from "../components/TouchableBack";
+import TouchableBack from "../../components/TouchableBack";
 
 const ItemDetails = () => {
   const { params } = useRoute();
